@@ -34,6 +34,17 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trains');
+        
+        Schema::table('trains', function (Blueprint $table) {
+            $table->dropColumn('azienda');
+            $table->dropColumn('stazione_di_partenza');
+            $table->dropColumn('orario_di_partenza');
+            $table->dropColumn('orario_di_arrivo');
+            $table->dropColumn('codice_treno');
+            $table->dropColumn('numero_carrozze');
+            $table->dropColumn('in_orario');
+            $table->dropColumn('cancellato');
+        });
     }
+
 };
