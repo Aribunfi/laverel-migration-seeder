@@ -15,6 +15,7 @@
             <div class="row">
 
                 @forelse ($trains as $train)
+                
                     <div class="col 3">
                        
                         <div class="card" style="width: 18rem;">
